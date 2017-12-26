@@ -1,5 +1,5 @@
 influxdb:
-  image: influxdb
+  image: influxdb:latest
   volumes:
     - ./DOCKER_DATA/influxdb:/var/lib/influxdb
   ports:
@@ -9,6 +9,6 @@ chronograf:
   volumes:
     - ./DOCKER_DATA/chronograf:/var/lib/chronograf
   ports:
-    - "8083:8888"
-  links:
-    - influxdb
+    - "8084:8888"
+#  links:
+#    - influxdb
